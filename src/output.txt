@@ -1,0 +1,59 @@
+Fri Apr 24 20:04:26 2015 Logging in
+Fri Apr 24 20:04:31 2015 Login successful
+
+Fri Apr 24 20:04:31 2015 Loading library...
+Fri Apr 24 20:04:35 2015 Done. 1586 songs detected.
+
+
+Fri Apr 24 20:04:35 2015 Starting buffer thread: CURRENT
+Fri Apr 24 20:04:35 2015 Starting buffer thread: NEXT
+Fri Apr 24 20:04:35 2015 Updating buffer CURRENT
+Fri Apr 24 20:04:35 2015 Updating buffer NEXT
+Fri Apr 24 20:04:40 2015 Button clicked: PLAY_PAUSE
+Fri Apr 24 20:04:40 2015 waiting for thread: CURRENT
+Fri Apr 24 20:04:40 2015 Finished updating buffer NEXT
+Fri Apr 24 20:04:40 2015 Returning from buffer thread: NEXT
+Fri Apr 24 20:04:44 2015 Finished updating buffer CURRENT
+Fri Apr 24 20:04:44 2015 Returning from buffer thread: CURRENT
+Fri Apr 24 20:04:44 2015 proceeding
+Fri Apr 24 20:04:44 2015 playing song: Joy
+Fri Apr 24 20:04:44 2015 Starting buffer thread: CURRENT
+Fri Apr 24 20:04:44 2015 Starting buffer thread: NEXT
+Fri Apr 24 20:04:44 2015 Returning from buffer thread: CURRENT
+Fri Apr 24 20:04:44 2015 Returning from buffer thread: NEXT
+Fri Apr 24 20:04:44 2015 Starting buffer thread: PREVIOUS
+Fri Apr 24 20:04:44 2015 Returning from buffer thread: PREVIOUS
+Fri Apr 24 20:04:46 2015 Button clicked: NEXT
+Fri Apr 24 20:04:46 2015 waiting for thread: CURRENT
+Fri Apr 24 20:04:46 2015 proceeding
+Fri Apr 24 20:04:46 2015 playing song: Billie Jean (Single Version)
+Fri Apr 24 20:04:46 2015 Starting buffer thread: NEXT
+Fri Apr 24 20:04:46 2015 Updating buffer NEXT
+Fri Apr 24 20:04:46 2015 Starting buffer thread: CURRENT
+Fri Apr 24 20:04:46 2015 Returning from buffer thread: CURRENT
+Fri Apr 24 20:04:46 2015 Starting buffer thread: PREVIOUS
+Fri Apr 24 20:04:47 2015 Returning from buffer thread: PREVIOUS
+Fri Apr 24 20:04:56 2015 Finished updating buffer NEXT
+Fri Apr 24 20:04:56 2015 Returning from buffer thread: NEXT
+Fri Apr 24 20:05:06 2015 Button clicked: NEXT
+Fri Apr 24 20:05:06 2015 waiting for thread: CURRENT
+Fri Apr 24 20:05:06 2015 proceeding
+Fri Apr 24 20:05:06 2015 playing song: Paradise City
+Fri Apr 24 20:05:06 2015 Starting buffer thread: CURRENT
+Fri Apr 24 20:05:06 2015 Returning from buffer thread: CURRENT
+Fri Apr 24 20:05:06 2015 Starting buffer thread: NEXT
+Fri Apr 24 20:05:06 2015 Updating buffer NEXT
+Fri Apr 24 20:05:06 2015 Starting buffer thread: PREVIOUS
+Fri Apr 24 20:05:06 2015 Returning from buffer thread: PREVIOUS
+Fri Apr 24 20:05:10 2015 Button clicked: NEXT
+Fri Apr 24 20:05:10 2015 waiting for thread: CURRENT
+Fri Apr 24 20:05:10 2015 proceeding
+Fri Apr 24 20:05:10 2015 playing song: Along The Road
+Fri Apr 24 20:05:10 2015 Starting buffer thread: CURRENT
+Fri Apr 24 20:05:10 2015 Updating buffer CURRENT
+Fri Apr 24 20:05:10 2015 Starting buffer thread: NEXT
+Fri Apr 24 20:05:10 2015 Updating buffer NEXT
+Fri Apr 24 20:05:10 2015 Starting buffer thread: PREVIOUS
+Fri Apr 24 20:05:10 2015 Returning from buffer thread: PREVIOUS
+Fri Apr 24 20:05:12 2015 Button clicked: NEXT
+Fri Apr 24 20:05:12 2015 waiting for thread: CURRENT
