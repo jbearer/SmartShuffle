@@ -164,6 +164,9 @@ class SongQueue:
 		if self._curSong and self._curSong.playing:
 			self._curSong.pause()
 
+		# while the song is playing, update the buffers
+		self.updateBuffers()
+
 		# if currentBuffer is still updating, wait for it to finish
 		# unlike prevBuffer and nextBuffer, currentBuffer MUST be
 		# up-to-date for a song to be played
@@ -175,9 +178,6 @@ class SongQueue:
 		log('playing song: ' + self._songs[-1])
 		self._curSong = self._currentBuffer.getSource().play()
 		self._curSong.on_eos = self.playNext
-
-		# while the song is playing, update the other buffers
-		self.updateBuffers()
 
 	def playSong(self, songName):
 		###############################################################
