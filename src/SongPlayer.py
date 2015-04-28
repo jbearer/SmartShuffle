@@ -174,6 +174,8 @@ class SongPlayer(pyglet.window.Window):
 		for control in self._controls:
 			control.draw()
 
+		self.set_visible(visible = self._queue.visible)
+
 	def updateInfo(self):
 		'''
 		Update the song information, album photo, etc

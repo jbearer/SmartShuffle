@@ -43,6 +43,8 @@ class SongBuffer:
 			# path must be a directory ending in a slash
 			self._filepath += '/'
 
+		# TODO: something seems to be broken here, the directory is not being created
+		# causing IOError #2 when the song tries to write to the file
 		osPath = os.path.dirname(self._filepath)
 		if not os.path.exists(osPath):
 			# make a new directory if needed

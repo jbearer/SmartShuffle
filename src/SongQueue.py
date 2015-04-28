@@ -47,6 +47,8 @@ class SongQueue:
 
 		:param songs: a dictionary of title:Song pairs
 		'''	
+		self.visible = False
+
 		self._songsD = songs
 		self._songs = songs.keys()
 
@@ -58,13 +60,18 @@ class SongQueue:
 
 		# Since no songs have been played yet, prevBuffer's song is undefined
 		self._prevBuffer = SongBuffer('buffer3', debugName = 'PREVIOUS')
+		self._prevBufThread = None
 
-		self._curBufThread = BufferThread(self._currentBuffer)
+		# Buffer next song in a separate thread
 		self._nextBufThread = BufferThread(self._nextBuffer)
-		self._curBufThread.start()
 		self._nextBufThread.start()
 
-		self._prevBufThread = None
+		# Update current buffer in this thread, must be updated to continue to playback
+		self._curBufThread = None
+		self._currentBuffer.update()
+
+		# Display the window when the first song is ready
+		self.visible = True;
 
 		self._curSong = None #Allows us to tell if the queue has been started or not
 		self._source = None
@@ -175,9 +182,10 @@ class SongQueue:
 		log('proceeding')
 
 		# start the new song
-		log('playing song: ' + self._songs[-1])
+		log('playing song: ' + self._history[-1])
 		self._curSong = self._currentBuffer.getSource().play()
-		self._curSong.on_eos = self.playNext
+		#self._curSong.on_eos = self.playNext
+		self._curSong.on_eos = self.close()
 
 	def playSong(self, songName):
 		###############################################################
@@ -267,6 +275,12 @@ class SongQueue:
 		'''
 		Clean up resources
 		'''
+
+		# for now wait for threads to finish before we can access the files
+		# TODO: interrupt the threads so we dont have to wait
+		self._curBufThread.join()
+		self._nextBufThread.join()
+		self._prevBufThread.join()
 
 		# delete the buffers
 		self._prevBuffer.close()
