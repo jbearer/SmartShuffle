@@ -174,8 +174,11 @@ class SongPlayer(pyglet.window.Window):
 		for control in self._controls:
 			control.draw()
 
+<<<<<<< HEAD
 		self.set_visible(visible = self._queue.visible)
 
+=======
+>>>>>>> master
 	def updateInfo(self):
 		'''
 		Update the song information, album photo, etc
@@ -222,28 +225,41 @@ class SongPlayer(pyglet.window.Window):
 		'''
 		Play or pause the queue appropriately
 		'''
+<<<<<<< HEAD
 		log('Button clicked: PLAY_PAUSE')
+=======
+
+>>>>>>> master
 		self._queue.togglePlay()
 
 	def restart(self):
 		'''
 		Restart the current song from the beginning
 		'''
+<<<<<<< HEAD
 		log('Button clicked: RESTART')
+=======
+>>>>>>> master
 		self._queue.playCurrent()
 
 	def next(self):
 		'''
 		Play the next song
 		'''
+<<<<<<< HEAD
 		log('Button clicked: NEXT')
+=======
+>>>>>>> master
 		self._queue.playNext()
 
 	def previous(self):
 		'''
 		Play the previous song
 		'''
+<<<<<<< HEAD
 		log('Button clicked: PREVIOUS')
+=======
+>>>>>>> master
 		self._queue.playPrevious()
 
 	def on_mouse_press(self, x, y, button, modifiers):

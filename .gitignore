@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 *.pyc
 *.mp3
 src/output.txt
 src/output.txt
+=======
+*.pyc
+>>>>>>> master
