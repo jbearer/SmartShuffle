@@ -30,7 +30,11 @@ class SongBuffer:
 		'''
 		:param path: a directory to which the buffe will write its data
 		:param song: the song to store. If song is None, nothing happens.
+<<<<<<< HEAD
+			If song is not None, the buffer will update at the next call to update
+=======
 			If song is not None, the buffer writes to disc immediately
+>>>>>>> master
 		:param debugName: the name of the buffer when it writes debug log
 			messages. If debugName is None, the buffer will not write to the log
 		'''
@@ -38,10 +42,19 @@ class SongBuffer:
 		self._song = song
 		self._filepath = path
 		self.name = debugName
+<<<<<<< HEAD
+		self._source = None
+=======
+>>>>>>> master
 		if self._filepath[-1] != '/':
 			# path must be a directory ending in a slash
 			self._filepath += '/'
 
+<<<<<<< HEAD
+		# TODO: something seems to be broken here, the directory is not being created
+		# causing IOError #2 when the song tries to write to the file
+=======
+>>>>>>> master
 		osPath = os.path.dirname(self._filepath)
 		if not os.path.exists(osPath):
 			# make a new directory if needed
@@ -51,9 +64,14 @@ class SongBuffer:
 			# without a song, the buffer cannot be updated
 			self._needsUpdate = False
 		else:
+<<<<<<< HEAD
+			# update at the next call to update
+			self._needsUpdate = True
+=======
 			# if given a song, write it to disc
 			self._needsUpdate = True
 			self.update()
+>>>>>>> master
 
 	def close(self):
 		'''

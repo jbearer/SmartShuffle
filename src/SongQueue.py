@@ -27,6 +27,15 @@ class SongQueue:
 
 			* _curSong: a managed sound player for the currently playing song
 
+<<<<<<< HEAD
+			* _curBufThread: a thread object that updates _currentBuffer
+
+			* _nextBufThread: updates _nextBuffer
+
+			* _prevBufThread: updates _prevBuffer
+
+=======
+>>>>>>> master
 			#TODO: look into using 3.x, in which _songs.keys() would be O(1)
 				instead of O(n) in 2.x. This will be useful for shuffling, when
 				we lose the benefit of constant time lookup for a known song.
@@ -41,6 +50,11 @@ class SongQueue:
 
 		:param songs: a dictionary of title:Song pairs
 		'''	
+<<<<<<< HEAD
+		self.visible = False
+
+=======
+>>>>>>> master
 		self._songsD = songs
 		self._songs = songs.keys()
 
@@ -52,6 +66,21 @@ class SongQueue:
 
 		# Since no songs have been played yet, prevBuffer's song is undefined
 		self._prevBuffer = SongBuffer('buffer3', debugName = 'PREVIOUS')
+<<<<<<< HEAD
+		self._prevBufThread = None
+
+		# Buffer next song in a separate thread
+		self._nextBufThread = BufferThread(self._nextBuffer)
+		self._nextBufThread.start()
+
+		# Update current buffer in this thread, must be updated to continue to playback
+		self._curBufThread = None
+		self._currentBuffer.update()
+
+		# Display the window when the first song is ready
+		self.visible = True;
+=======
+>>>>>>> master
 
 		self._curSong = None #Allows us to tell if the queue has been started or not
 		self._source = None
@@ -151,6 +180,23 @@ class SongQueue:
 		if self._curSong and self._curSong.playing:
 			self._curSong.pause()
 
+<<<<<<< HEAD
+		# while the song is playing, update the buffers
+		self.updateBuffers()
+
+		# if currentBuffer is still updating, wait for it to finish
+		# unlike prevBuffer and nextBuffer, currentBuffer MUST be
+		# up-to-date for a song to be played
+		log('waiting for thread: CURRENT')
+		self._curBufThread.join()
+		log('proceeding')
+
+		# start the new song
+		log('playing song: ' + self._history[-1])
+		self._curSong = self._currentBuffer.getSource().play()
+		#self._curSong.on_eos = self.playNext
+		self._curSong.on_eos = self.close()
+=======
 		# current buffer must be updated before song can be played
 		self._currentBuffer.update()
 
@@ -161,6 +207,7 @@ class SongQueue:
 
 		# while the song is playing, update the other buffers
 		self.updateBuffers()
+>>>>>>> master
 
 	def playSong(self, songName):
 		###############################################################
@@ -238,20 +285,59 @@ class SongQueue:
 		self._prevBuffer.name = 'PREVIOUS'
 
 	def updateBuffers(self):
+<<<<<<< HEAD
+		self._curBufThread = BufferThread(self._currentBuffer)
+		self._nextBufThread = BufferThread(self._nextBuffer)
+		self._prevBufThread = BufferThread(self._prevBuffer)
+
+		self._curBufThread.start()
+		self._nextBufThread.start()
+		self._prevBufThread.start()
+=======
 		self._prevBuffer.update()
 		self._currentBuffer.update()
 		self._nextBuffer.update()
+>>>>>>> master
 
 	def close(self):
 		'''
 		Clean up resources
 		'''
 
+<<<<<<< HEAD
+		# for now wait for threads to finish before we can access the files
+		# TODO: interrupt the threads so we dont have to wait
+		self._curBufThread.join()
+		self._nextBufThread.join()
+		self._prevBufThread.join()
+
+=======
+>>>>>>> master
 		# delete the buffers
 		self._prevBuffer.close()
 		self._currentBuffer.close()
 		self._nextBuffer.close()
 
 
+<<<<<<< HEAD
+class BufferThread(threading.Thread):
+	'''
+	Updates a songbuffer 
+	TODO: can be interrupted (eg when the user skips several songs quickly)
+	'''
+
+	def __init__(self, buffer):
+		'''
+		:param buffer: the buffer to update
+		'''
+		super(BufferThread, self).__init__()
+		self._buffer = buffer
+
+	def run(self):
+		log('Starting buffer thread: ' + self._buffer.name)
+		self._buffer.update()
+		log('Returning from buffer thread: ' + self._buffer.name)
+=======
 	def __del__(self):
 		self.close()
+>>>>>>> master

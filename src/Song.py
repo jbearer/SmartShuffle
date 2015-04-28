@@ -40,6 +40,10 @@ class Song:
 		self.data = data
 		self._account = account
 		self._song = None
+<<<<<<< HEAD
+		self._exitFlag = False
+=======
+>>>>>>> master
 
 	def title(self):
 		return self.data['title']
@@ -79,6 +83,15 @@ class Song:
 		'''
 		return self._account.getStreamUrl(self.id())
 
+<<<<<<< HEAD
+	def abortThreads(self):
+		'''
+		Stop any operations currently being processed
+		'''
+		self._exitFlag = True
+
+=======
+>>>>>>> master
 	def writeAudioToFile(self, filename):
 		'''
 		Write the audio to the given file. Should overwrite if the file
@@ -91,8 +104,21 @@ class Song:
 
 		response = None
 		try:
+<<<<<<< HEAD
+			log('getting stream url: song ' + self.data['title'])
+			url = self.streamUrl()
+			log('obtained stream url: song ' + self.data['title'])
+			log('getting audio data: song ' + self.data['title'])
+
+			# TODO: this is where the call spends the vast majority of its time
+			# get the data in chunks and have the song check a flag each time so
+			# that the streaming can be interrupted when necessary
+			response = http.request('GET', url)
+			log('obtained audio data: song ' + self.data['title'])
+=======
 			url = self.streamUrl()
 			response = http.request('GET', url)
+>>>>>>> master
 
 		except urllib3.exceptions.SSLError as e:
 			log('SSL Error:', console=True)
@@ -100,9 +126,21 @@ class Song:
 
 		try:
 			f = open(filename, 'wb')
+<<<<<<< HEAD
+			log('writing audio data: song ' + self.data['title'])
+			f.write(response.data)
+			log('wrote audio data: song ' + self.data['title'])
+			f.close()
+		except IOError as e:
+			log('IOERROR: Unable to open file in Song ' + self.data['title'], console = True)
+			log('\tFile: ' + filename, console = True)
+			log('\t' + str(e), console = True)
+			log('\tTraceback: song.Song.writeAudioToFile(' + filename + ')')
+=======
 			f.write(response.data)
 			f.close()
 		except IOError as e:
 			log('IOERROR: Unable to open file in Song ' + self.data['title'], console = True)
 			log('File: ' + filename, console = True)
 			log(e, console = True)
+>>>>>>> master
