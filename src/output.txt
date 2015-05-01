@@ -1,55 +1,54 @@
-Tue Apr 28 01:06:05 2015 Logging in
-Tue Apr 28 01:06:10 2015 Login successful
+Fri May 01 03:00:16 2015 Logging in
+Fri May 01 03:00:20 2015 Login successful
 
-Tue Apr 28 01:06:10 2015 Loading library...
-Tue Apr 28 01:06:13 2015 Done. 1587 songs detected.
+Fri May 01 03:00:20 2015 Loading library...
+Fri May 01 03:00:22 2015 Done. 1588 songs detected.
 
 
-Tue Apr 28 01:06:13 2015 Updating buffer CURRENT
-Tue Apr 28 01:06:13 2015 Starting buffer thread: NEXT
-Tue Apr 28 01:06:13 2015 Updating buffer NEXT
-Tue Apr 28 01:06:13 2015 getting stream url: song Wheel In the Sky
-Tue Apr 28 01:06:13 2015 getting stream url: song Joy
-Tue Apr 28 01:06:14 2015 obtained stream url: song Wheel In the Sky
-Tue Apr 28 01:06:14 2015 getting audio data: song Wheel In the Sky
-Tue Apr 28 01:06:14 2015 obtained stream url: song Joy
-Tue Apr 28 01:06:14 2015 getting audio data: song Joy
-Tue Apr 28 01:06:17 2015 obtained audio data: song Wheel In the Sky
-Tue Apr 28 01:06:17 2015 writing audio data: song Wheel In the Sky
-Tue Apr 28 01:06:17 2015 wrote audio data: song Wheel In the Sky
-Tue Apr 28 01:06:17 2015 obtained audio data: song Joy
-Tue Apr 28 01:06:17 2015 writing audio data: song Joy
-Tue Apr 28 01:06:17 2015 wrote audio data: song Joy
-Tue Apr 28 01:06:21 2015 Finished updating buffer NEXT
-Tue Apr 28 01:06:21 2015 Returning from buffer thread: NEXT
-Tue Apr 28 01:06:21 2015 Finished updating buffer CURRENT
-Tue Apr 28 01:06:24 2015 Button clicked: PLAY_PAUSE
-Tue Apr 28 01:06:24 2015 Starting buffer thread: CURRENT
-Tue Apr 28 01:06:24 2015 Returning from buffer thread: CURRENT
-Tue Apr 28 01:06:24 2015 Starting buffer thread: NEXT
-Tue Apr 28 01:06:24 2015 Starting buffer thread: PREVIOUS
-Tue Apr 28 01:06:24 2015 waiting for thread: CURRENT
- NEXT
-Tue Apr 28 01:06:24 2015 Returning from buffer thread: PREVIOUS
-Tue Apr 28 01:06:24 2015 proceeding
-Tue Apr 28 01:06:24 2015 playing song: Wheel In the Sky
-Tue Apr 28 01:06:27 2015 Button clicked: NEXT
-Tue Apr 28 01:06:27 2015 Starting buffer thread: CURRENT
-Tue Apr 28 01:06:27 2015 Returning from buffer thread: CURRENT
-Tue Apr 28 01:06:27 2015 Starting buffer thread: NEXT
-Tue Apr 28 01:06:27 2015 Starting buffer thread: PREVIOUS
-Tue Apr 28 01:06:27 2015 Updating buffer NEXT
-Tue Apr 28 01:06:27 2015 waiting for thread: CURRENT
-Tue Apr 28 01:06:27 2015 Returning from buffer thread: PREVIOUS
-Tue Apr 28 01:06:27 2015 getting stream url: song Billie Jean (Single Version)
-Tue Apr 28 01:06:27 2015 proceeding
-Tue Apr 28 01:06:27 2015 playing song: Joy
-Tue Apr 28 01:06:27 2015 obtained stream url: song Billie Jean (Single Version)
-Tue Apr 28 01:06:27 2015 getting audio data: song Billie Jean (Single Version)
-Tue Apr 28 01:06:30 2015 obtained audio data: song Billie Jean (Single Version)
-Tue Apr 28 01:06:30 2015 IOERROR: Unable to open file in Song Billie Jean (Single Version)
-Tue Apr 28 01:06:30 2015 	File: buffer3/audio.mp3
-Tue Apr 28 01:06:30 2015 	[Errno 2] No such file or directory: 'buffer3/audio.mp3'
-Tue Apr 28 01:06:30 2015 	Traceback: song.Song.writeAudioToFile(buffer3/audio.mp3)
-Tue Apr 28 01:06:36 2015 Unable to free queue buffering resources
-Tue Apr 28 01:06:36 2015 Logout successful
+Fri May 01 03:00:22 2015 Creating directory buffer1
+Fri May 01 03:00:22 2015 Updating buffer CURRENT
+Fri May 01 03:00:22 2015 getting stream url: song Wheel In the Sky
+Fri May 01 03:00:22 2015 obtained stream url: song Wheel In the Sky
+Fri May 01 03:00:22 2015 getting audio data: song Wheel In the Sky
+Fri May 01 03:00:25 2015 obtained audio data: song Wheel In the Sky
+Fri May 01 03:00:25 2015 writing audio data: song Wheel In the Sky
+Fri May 01 03:00:25 2015 wrote audio data: song Wheel In the Sky
+Fri May 01 03:00:27 2015 Finished updating buffer CURRENT
+Fri May 01 03:00:27 2015 Creating directory buffer2
+Fri May 01 03:00:27 2015 Updating buffer NEXT
+Fri May 01 03:00:27 2015 getting stream url: song Joy
+Fri May 01 03:00:27 2015 obtained stream url: song Joy
+Fri May 01 03:00:27 2015 getting audio data: song Joy
+Fri May 01 03:00:30 2015 obtained audio data: song Joy
+Fri May 01 03:00:30 2015 writing audio data: song Joy
+Fri May 01 03:00:30 2015 wrote audio data: song Joy
+Fri May 01 03:00:31 2015 Finished updating buffer NEXT
+Fri May 01 03:00:31 2015 Creating directory buffer3
+Fri May 01 03:00:31 2015 Starting buffer thread: NEXT
+Fri May 01 03:00:31 2015 Returning from buffer thread: NEXT
+Fri May 01 03:00:35 2015 Button clicked: PLAY_PAUSE
+Fri May 01 03:00:35 2015 Starting buffer thread: PREVIFri MFri May 01 03:00:35 2015 Starting buffer thread: CURRENT
+Fri May 01 03:00:35 2015 Returning from buffer thread: PREVIOUS
+Fri May 01 03:00:35 2015 Returning from buffer thread: CURRENT
+Fri May 01 03:00:35 2015 Returning from buffer thread: NEXT
+Fri May 01 03:00:35 2015 proceeding
+Fri May 01 03:00:35 2015 playing song: Wheel In the Sky
+Fri May 01 03:00:40 2015 Button clicked: NEXT
+Fri May 01 03:00:40 2015 Starting buffer thread: PREVIOUS
+Fri May 01 03:00:40 2015 Starting buffer thread: NEXT
+Fri May 01 03:00:40 2015 Updating buffer NEXT
+Fri May 01 03:00:40 2015 waiting for thread: CURRENT
+ PREVIOUS
+Fri May 01 03:00:40 2015 getting stream url: song Billie Jean (Single Version)
+Fri May 01 03:00:40 2015 Starting buffer thread: CURRENT
+Fri May 01 03:00:40 2015 Returning from buffer thread: CURRENT
+Fri May 01 03:00:40 2015 proceeding
+Fri May 01 03:00:40 2015 playing song: Joy
+Fri May 01 03:00:41 2015 obtained stream url: song Billie Jean (Single Version)
+Fri May 01 03:00:41 2015 getting audio data: song Billie Jean (Single Version)
+Fri May 01 03:00:44 2015 obtained audio data: song Billie Jean (Single Version)
+Fri May 01 03:00:44 2015 writing audio data: song Billie Jean (Single Version)
+Fri May 01 03:00:44 2015 wrote audio data: song Billie Jean (Single Version)
+Fri May 01 03:00:47 2015 Finished updating buffer NEXT
+Fri May 01 03:00:47 2015 Returning from buffer thread: NEXT
+Fri May 01 03:00:47 2015 Logout successful
